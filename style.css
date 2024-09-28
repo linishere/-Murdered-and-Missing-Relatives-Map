@@ -1,0 +1,65 @@
+/* Custom styles for the MMIW project */
+
+/* General Body Styling */
+body {
+    font-family: "New Amsterdam", sans-serif;
+    background-color: #EEEEEE; /* Light background color */
+    color: #333; /* Dark text for readability */
+}
+
+
+/* Navbar Customization */
+.navbar {
+    background-color: #151515;
+}
+
+.navbar-brand {
+    font-family: "Bungee Tint";
+    font-weight: bold;
+    color: #A91D3A !important; /* Darker color for the brand */
+}
+
+.nav-link {
+    color: #EEEEEE !important; /* Darker color for links */
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #C73659 !important; /* Change color on hover */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #A91D3A; /* Primary color */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: #fff; /* Light text */
+}
+
+/* Map Section */
+#map {
+    height: 500px;
+    width: 100%
+
+}
+
+/* Customizing map popup style */
+.leaflet-popup-content-wrapper {
+    background-color: #C73659; /* Primary color for popup */
+    color: #fff;
+    font-weight: 500;
+}
+
+.leaflet-popup-tip {
+    background-color: #C73659; /* Match popup tip to popup color */
+}
+
+p {
+    font-family: "Josefin Sans";
+}
