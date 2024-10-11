@@ -84,10 +84,18 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Example marker (you can add more dynamically)
-        var marker = L.marker([39.8283, -98.5795]).addTo(map)
-            .bindPopup('Example MMIW Case Location')
-            .openPopup();
+        var markers = [
+            { lat: 40.7128, lng: -74.0060, popup: "Case 1: New York, NY" },
+            { lat: 34.0522, lng: -118.2437, popup: "Case 2: Los Angeles, CA" },
+            { lat: 41.8781, lng: -87.6298, popup: "Case 3: Chicago, IL" },
+            { lat: 47.6062, lng: -122.3321, popup: "Case 4: Seattle, WA" },
+            { lat: 49.2827, lng: -123.1207, popup: "Case 5: Vancouver, BC" }
+        ];
+
+        markers.forEach(function(marker) {
+            L.marker([marker.lat, marker.lng]).addTo(map)
+                .bindPopup(marker.popup);
+        });
 
     </script>
 </body>
