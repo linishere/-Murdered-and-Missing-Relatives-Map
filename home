@@ -20,6 +20,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
+    <!-- Leaflet Awesome Markers CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.js"></script>
+
 </head>
 <body>
 
@@ -84,18 +88,31 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        var markers = [
-            { lat: 40.7128, lng: -74.0060, popup: "Case 1: New York, NY" },
-            { lat: 34.0522, lng: -118.2437, popup: "Case 2: Los Angeles, CA" },
-            { lat: 41.8781, lng: -87.6298, popup: "Case 3: Chicago, IL" },
-            { lat: 47.6062, lng: -122.3321, popup: "Case 4: Seattle, WA" },
-            { lat: 49.2827, lng: -123.1207, popup: "Case 5: Vancouver, BC" }
-        ];
-
-        markers.forEach(function(marker) {
-            L.marker([marker.lat, marker.lng]).addTo(map)
-                .bindPopup(marker.popup);
+       // Create markers with different colors
+       var redMarker = L.AwesomeMarkers.icon({
+            icon: 'info-sign',
+            markerColor: 'red'
         });
+
+        var blueMarker = L.AwesomeMarkers.icon({
+            icon: 'info-sign',
+            markerColor: 'blue'
+        });
+
+        var greenMarker = L.AwesomeMarkers.icon({
+            icon: 'info-sign',
+            markerColor: 'green'
+        });
+
+        // Add markers to the map with different colors
+        L.marker([40.7128, -74.0060], {icon: redMarker}).addTo(map)
+            .bindPopup("Case 1: New York, NY");
+
+        L.marker([34.0522, -118.2437], {icon: blueMarker}).addTo(map)
+            .bindPopup("Case 2: Los Angeles, CA");
+
+        L.marker([41.8781, -87.6298], {icon: greenMarker}).addTo(map)
+            .bindPopup("Case 3: Chicago, IL");
 
     </script>
 </body>
