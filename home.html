@@ -20,10 +20,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
-    <!-- Leaflet Awesome Markers CSS and JS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.js"></script>
-
 </head>
 <body>
 
@@ -89,32 +85,24 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-       // Create markers with different colors
-       var redMarker = L.AwesomeMarkers.icon({
-            icon: 'info-sign',
-            markerColor: 'red'
+        // Array of missing persons data
+        var missingPersons = [
+            { name: "Acey Morrison", location: [44.0805, -103.2310], details: "Beautful two spirit woman murdered by Gary Landers in Rapid City, SD. Gary is in state custody denying that he killed her" },
+            { name: "Serena Spider", location: [44.0855, -103.2309], details: "On May 3, 2023, she was murdered in rapid City on May 3, 2023 by Duane Sierra. She was found with a gunshot wound and was pronounced deceased at Monument. Duane is in custody and a second man by the name Patrick Mousseaux is being sought." },
+            { name: "Eternity Flying Horse", location: [43.0255, -102.5563], details: "In 2021, Eternity Flying Horse was killed in a hit-and-run." },
+            { name: "Ziara Arnold", location: [47.2539, -122.4443], details: "MISSING: Since 07/06/2024, Ziara Arnold, 18yrs, 5'7ft, 100lbs, Brown eyes, Brown hair. If you have any information please contact the Tacoma PD (253) 287-4455."},
+            { name: "Louann Marie Aiken", location: [45.5152, -122.6784], details: "She was last seen on April 15, 2023."}, 
+            { name: "Ciara Raw Sheoships", location: [45.6704, -11.6836], details: "She was last seen in the MIssion/Pendleton area in Oregon."}, 
+            { name: "Emmilee Risling", location: [41.861, -122824], details: "She is a 33-year-old mother of two. She was last seen October 2021 in Northern California’s forests near the Klamath River. Risling is a member of the Hoopa Valley Tribe – one of only two tribes that still exist on their ancestral homeland in California. On May 5, 2022, National Missing and Murdered Indigenous Peoples Day, Risling’s 21-month-old daughter and parents joined other members of the Yurok Tribe in remembrance. Emmilee Risling is still missing."}, 
+            { name: "Khadijah Britton", location: [39.22, -123.28], details: "She is a member of the Wailacki Round Valley Indian Tribe, now rests beside Rachel Sloan’s memorial. Less than one week before her disappearance in February 2019, Britton reported to domestic violence counselors that her boyfriend tried to kill her. She was last seen being forced into a car at gunpoint."},
+            
+        ];
+
+        // Loop through the array to create markers for each person
+        missingPersons.forEach(function(person) {
+            L.marker(person.location).addTo(map)
+                .bindPopup(`<b>${person.name}</b><br>${person.details}`);
         });
-
-        var blueMarker = L.AwesomeMarkers.icon({
-            icon: 'info-sign',
-            markerColor: 'blue'
-        });
-
-        var greenMarker = L.AwesomeMarkers.icon({
-            icon: 'info-sign',
-            markerColor: 'green'
-        });
-
-        // Add markers to the map with different colors
-        L.marker([40.7128, -74.0060], {icon: redMarker}).addTo(map)
-            .bindPopup("Case 1: New York, NY");
-
-        L.marker([34.0522, -118.2437], {icon: blueMarker}).addTo(map)
-            .bindPopup("Case 2: Los Angeles, CA");
-
-        L.marker([41.8781, -87.6298], {icon: greenMarker}).addTo(map)
-            .bindPopup("Case 3: Chicago, IL");
-
     </script>
 </body>
 </html>

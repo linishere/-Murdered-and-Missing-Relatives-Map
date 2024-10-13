@@ -7,6 +7,10 @@ body {
     color: #333; /* Dark text for readability */
 }
 
+#map {
+    height: 500px; /* Ensure the height is set */
+    width: 100%;
+}
 
 /* Navbar Customization */
 .navbar {
@@ -40,13 +44,6 @@ h1 {
 footer {
     background-color: #343a40; /* Dark background */
     color: #fff; /* Light text */
-}
-
-/* Map Section */
-#map {
-    height: 500px;
-    width: 100%
-
 }
 
 /* Customizing map popup style */
