@@ -2,28 +2,46 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files (updated safe approach)
-app.use(express.static(__dirname, {
-  dotfiles: 'ignore',
-  index: 'index.html'
-}));
+// Middleware to parse JSON requests (if needed)
+app.use(express.json());
 
-// Explicit static routes
-app.use('/css', express.static(path.join(__dirname, 'css')));
+// Serve static files safely
+app.use(express.static(path.join(__dirname, 'public')));  // Best practice: Use 'public' folder
+
+// Explicit static routes (optional, if you need special handling)
+app.use('/css', express.static(path.join(__dirname, 'css'), { 
+  maxAge: '1d'  }));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
 
-// API endpoint (simplified)
+// API endpoint (improved error handling)
 app.get('/api/cases', (req, res) => {
-  res.sendFile(path.join(__dirname, '/data/missingPersons.json'));
+  try {
+      const filePath = path.join(__dirname, 'data/missingPersons.json');
+      console.log('Resolved file path:', filePath); // Debugging
+      res.sendFile(filePath, {
+          headers: {
+              'Content-Type': 'application/json'
+          }
+      });
+  } catch (err) {
+      console.error('API Error:', err);
+      res.status(500).send('Internal Server Error');
+  }
 });
 
-// Fallback route (safe pattern)
+// Fallback route (SPA support - safe pattern)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const PORT = 3000;
+// Error handling middleware (catches unhandled errors)
+app.use((err, req, res, next) => {
+  console.error('Server Error:', err);
+  res.status(500).send('Server Error');
+});
+
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server safely running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
