@@ -15,7 +15,7 @@ app.use('/pages', express.static(path.join(__dirname, 'pages')));
 
 // API endpoint (simplified)
 app.get('/api/cases', (req, res) => {
-  res.sendFile(path.join(__dirname, 'data/missingPersons.json'));
+  res.sendFile(path.join(__dirname, '/data/missingPersons.json'));
 });
 
 // Fallback route (safe pattern)
