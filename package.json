@@ -1,0 +1,24 @@
+{
+  "name": "-murdered-and-missing-relatives-map",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linishere/-Murdered-and-Missing-Relatives-Map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linishere/-Murdered-and-Missing-Relatives-Map/issues"
+  },
+  "homepage": "https://github.com/linishere/-Murdered-and-Missing-Relatives-Map#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "path-to-regexp": "^8.2.0"
+  }
+}

@@ -38,3 +38,9 @@ fetch('../data/missingPersons.json')
             </div>
         `;
     });
+
+fetch('/api/cases')  // Now uses the Node.js endpoint
+.then(response => response.json())
+.then(data => {
+    // MapLibre marker code here
+});
