@@ -14,25 +14,27 @@ app.use('/css', express.static(path.join(__dirname, 'css'), {
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
 
-// API endpoint (improved error handling)
+// API endpoint
 app.get('/api/cases', (req, res) => {
-  try {
-      const filePath = path.join(__dirname, 'data/missingPersons.json');
-      console.log('Resolved file path:', filePath); // Debugging
-      res.sendFile(filePath, {
-          headers: {
-              'Content-Type': 'application/json'
-          }
-      });
-  } catch (err) {
-      console.error('API Error:', err);
-      res.status(500).send('Internal Server Error');
-  }
+    try {
+        const filePath = path.join(__dirname, 'data/missingPersons.json');
+        console.log('Resolved file path:', filePath); // Debugging
+        res.sendFile(filePath, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    } catch (err) {
+        console.error('API Error:', err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
-// Fallback route (SPA support - safe pattern)
+// Fallback route (must be last)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+    const filePath = path.join(__dirname, 'index.html');
+    console.log('Resolved file path for fallback:', filePath);
+    res.sendFile(filePath);
 });
 
 // Error handling middleware (catches unhandled errors)
