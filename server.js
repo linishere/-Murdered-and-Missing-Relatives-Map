@@ -5,9 +5,6 @@ const app = express();
 // Middleware to parse JSON requests (if needed)
 app.use(express.json());
 
-// Serve static files safely
-app.use(express.static(path.join(__dirname, 'public')));  // Best practice: Use 'public' folder
-
 // Explicit static routes (optional, if you need special handling)
 app.use('/css', express.static(path.join(__dirname, 'css'), { 
   maxAge: '1d'  }));
