@@ -2,6 +2,7 @@
 
 /* General Body Styling */
 body {
+    display: grid;
     font-family: "New Amsterdam", sans-serif;
     background-color: #EEEEEE; /* Light background color */
     color: #333; /* Dark text for readability */
