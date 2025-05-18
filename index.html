@@ -58,6 +58,29 @@
         </div>
     </div>
 
+    <div class="container mt-5">
+        <h2>Submit a Missing Person Case</h2>
+        <form id="caseForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="form-group">
+            <label for="latitude">Latitude:</label>
+            <input type="number" step="any" class="form-control" id="latitude" required />
+        </div>
+        <div class="form-group">
+            <label for="longitude">Longitude:</label>
+            <input type="number" step="any" class="form-control" id="longitude" required />
+        </div>
+        <div class="form-group">
+            <label for="details">Details:</label>
+            <textarea class="form-control" id="details" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Case</button>
+        </form>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-dark text-center py-4 mt-4">
         <p>&copy; 2024 MMIP Project. All rights reserved.</p>

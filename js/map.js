@@ -46,3 +46,29 @@ async function loadMarkers() {
 
 
 loadMarkers()
+
+// Form 
+const form = document.getElementById('caseForm');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const latitude = parseFloat(document.getElementById('latitude').value);
+  const longitude = parseFloat(document.getElementById('longitude').value);
+  const details = document.getElementById('details').value;
+
+  const { data, error } = await supabase
+    .from('missing_relatives')
+    .insert([{ name, latitude, longitude, details }]);
+
+  if (error) {
+    console.error('Error submitting case:', error);
+    alert('There was a problem submitting the case.');
+    return;
+  }
+
+  alert('Case submitted successfully!');
+  form.reset();
+  loadMarkers(); // Optional: refresh map markers with the new case
+});
