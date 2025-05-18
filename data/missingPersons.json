@@ -1,52 +1,62 @@
 [
-    {
-        "name": "Acey Morrison",
-        "location": [44.0805, -103.2310],
-        "details": "Beautiful two spirit woman murdered by Gary Landers in Rapid City, SD. Gary is in state custody denying that he killed her"
-    },
-    {
-        "name": "Serena Spider",
-        "location": [44.0855, -103.2309],
-        "details": "On May 3, 2023, she was murdered in Rapid City by Duane Sierra. She was found with a gunshot wound and was pronounced deceased at Monument. Duane is in custody and a second man by the name Patrick Mousseaux is being sought."
-    },
-    {
-        "name": "Eternity Flying Horse",
-        "location": [43.0255, -102.5563],
-        "details": "In 2021, Eternity Flying Horse was killed in a hit-and-run."
-    },
-    {
-        "name": "Ziara Arnold",
-        "location": [47.2539, -122.4443],
-        "details": "MISSING: Since 07/06/2024, Ziara Arnold, 18yrs, 5'7ft, 100lbs, Brown eyes, Brown hair. If you have any information please contact the Tacoma PD (253) 287-4455."
-    },
-    {
-        "name": "Louann Marie Aiken",
-        "location": [45.5152, -122.6784],
-        "details": "She was last seen on April 15, 2023."
-    },
-    {
-        "name": "Ciara Raw Sheoships",
-        "location": [45.6704, -11.6836],
-        "details": "She was last seen in the Mission/Pendleton area in Oregon."
-    },
-    {
-        "name": "Emmilee Risling",
-        "location": [41.861, -122.824],
-        "details": "She is a 33-year-old mother of two. She was last seen October 2021 in Northern California's forests near the Klamath River. Risling is a member of the Hoopa Valley Tribe - one of only two tribes that still exist on their ancestral homeland in California. On May 5, 2022, National Missing and Murdered Indigenous Peoples Day, Risling's 21-month-old daughter and parents joined other members of the Yurok Tribe in remembrance. Emmilee Risling is still missing."
-    },
-    {
-        "name": "Khadijah Britton",
-        "location": [39.22, -123.28],
-        "details": "She is a member of the Wailacki Round Valley Indian Tribe, now rests beside Rachel Sloan's memorial. Less than one week before her disappearance in February 2019, Britton reported to domestic violence counselors that her boyfriend tried to kill her. She was last seen being forced into a car at gunpoint."
-    },
-    {
-        "name": "Nyvelle Stone-Quick Bear",
-        "location": [43.574, -103.316],
-        "details": "Murdered with a gun on September 15, 2022, by her boyfriend Justin Bradford."
-    },
-    {
-        "name": "Susan Fast Eagle",
-        "location": [44.0805, -103.231],
-        "details": "Missing since May 13, 2021."
-    }
+  {
+    "name": "Acey Morrison",
+    "latitude": 44.0805,
+    "longitude": -103.2310,
+    "details": "Beautiful two spirit woman murdered by Gary Landers in Rapid City, SD. Gary is in state custody denying that he killed her"
+  },
+  {
+    "name": "Serena Spider",
+    "latitude": 44.0855,
+    "longitude": -103.2309,
+    "details": "On May 3, 2023, she was murdered in Rapid City by Duane Sierra. She was found with a gunshot wound and was pronounced deceased at Monument. Duane is in custody and a second man by the name Patrick Mousseaux is being sought."
+  },
+  {
+    "name": "Eternity Flying Horse",
+    "latitude": 43.0255,
+    "longitude": -102.5563,
+    "details": "In 2021, Eternity Flying Horse was killed in a hit-and-run."
+  },
+  {
+    "name": "Ziara Arnold",
+    "latitude": 47.2539,
+    "longitude": -122.4443,
+    "details": "MISSING: Since 07/06/2024, Ziara Arnold, 18yrs, 5'7ft, 100lbs, Brown eyes, Brown hair. If you have any information please contact the Tacoma PD (253) 287-4455."
+  },
+  {
+    "name": "Louann Marie Aiken",
+    "latitude": 45.5152,
+    "longitude": -122.6784,
+    "details": "She was last seen on April 15, 2023."
+  },
+  {
+    "name": "Ciara Raw Sheoships",
+    "latitude": 45.6704,
+    "longitude": -11.6836,
+    "details": "She was last seen in the Mission/Pendleton area in Oregon."
+  },
+  {
+    "name": "Emmilee Risling",
+    "latitude": 41.861,
+    "longitude": -122.824,
+    "details": "She is a 33-year-old mother of two. She was last seen October 2021 in Northern California's forests near the Klamath River. Risling is a member of the Hoopa Valley Tribe - one of only two tribes that still exist on their ancestral homeland in California. On May 5, 2022, National Missing and Murdered Indigenous Peoples Day, Risling's 21-month-old daughter and parents joined other members of the Yurok Tribe in remembrance. Emmilee Risling is still missing."
+  },
+  {
+    "name": "Khadijah Britton",
+    "latitude": 39.22,
+    "longitude": -123.28,
+    "details": "She is a member of the Wailacki Round Valley Indian Tribe, now rests beside Rachel Sloan's memorial. Less than one week before her disappearance in February 2019, Britton reported to domestic violence counselors that her boyfriend tried to kill her. She was last seen being forced into a car at gunpoint."
+  },
+  {
+    "name": "Nyvelle Stone-Quick Bear",
+    "latitude": 43.574,
+    "longitude": -103.316,
+    "details": "Murdered with a gun on September 15, 2022, by her boyfriend Justin Bradford."
+  },
+  {
+    "name": "Susan Fast Eagle",
+    "latitude": 44.0805,
+    "longitude": -103.231,
+    "details": "Missing since May 13, 2021."
+  }
 ]
