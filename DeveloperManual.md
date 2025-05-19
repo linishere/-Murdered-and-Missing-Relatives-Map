@@ -52,17 +52,10 @@ Note:
 - For POST and PATCH, send JSON in the request body.
 - For DELETE and PATCH, provide the case `id` as a URL parameter.
 
-## Known Bugs
--No critical bugs are currently documented.
--Automated testing is not yet implemented.
--Error handling and input validation may need improvement.
+## Known Bugs:
+No critical bugs are currently documented, automated testing is not yet implemented, error handling and input validation may need improvement.
 
-## Roadmap for Future Development
--Add comprehensive automated tests.
--Improve API documentation (consider Swagger/OpenAPI).
--Enhance error handling and input validation.
--Add authentication and authorization if required.
--Improve logging and monitoring.
--Optimize performance and scalability.
+## Roadmap for Future Development:
+Add comprehensive automated tests, improve API documentation (consider Swagger/OpenAPI), enhance error handling and input validation, add authentication and authorization if required, improve logging and monitoring, optimize performance and scalability.
 
 
