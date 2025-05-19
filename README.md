@@ -17,5 +17,5 @@ Any HTTP client that can use restful APIs
 
 ## Developer Manual
 
-For setup instructions and API details: [Developer Manual](docs/DeveloperManual.md) 
+For setup instructions and API details: [Developer Manual](DeveloperManual.md) 
 
