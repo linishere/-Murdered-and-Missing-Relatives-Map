@@ -5,7 +5,7 @@ This server powers the Map of Missing and Murdered Indigenous People (MMIP) Case
 
 ## Installation
 
-1. Prerequisites: Node.js (v18 or more) & npm (included in Node.js)
+1. Prerequisites: Node.js (version 18 or more) & npm (included in Node.js)
 
 2. Clone the repository:  
 git clone https://github.com/linishere-Murdered-and-Missing-Relatives-Map.git
