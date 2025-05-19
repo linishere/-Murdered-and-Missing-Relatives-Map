@@ -30,22 +30,22 @@ Feel free to add tests using a framework like Jest or Mocha.
 Here are the main API endpoints (you can update as you go):
 
 GET /api/cases
-List all MMIP cases
+- List all MMIP cases
 
 GET /api/cases/:id
-Get details for a specific case
+- Get details for a specific case
 
 POST /api/cases
-Add a new MMIP case
+- Add a new MMIP case
 
 PATCH /api/cases/:id
-Update an MMIP case
+- Update an MMIP case
 
 DELETE /api/cases/:id
-Delete an MMIP case
+- Delete an MMIP case
 
 GET /api/stats 
-Returns aggregated case statistics
+- Returns aggregated case statistics
 
 Note:  
 - For POST and PATCH, send JSON in the request body.
