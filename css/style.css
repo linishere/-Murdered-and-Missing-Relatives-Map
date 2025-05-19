@@ -93,3 +93,39 @@ p {
 }
 
 /* Other existing styles... */
+
+/* Fade in for screen sections */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button pulse animation on click */
+.btn-animate:active {
+  animation: pulse 0.4s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Drop animation for markers (if using custom marker elements) */
+@keyframes drop-in {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.marker {
+  animation: drop-in 0.5s ease forwards;
+}
+
+button:focus {
+  outline: none;
+}
+

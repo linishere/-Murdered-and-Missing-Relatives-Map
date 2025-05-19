@@ -72,19 +72,3 @@ form.addEventListener('submit', async (e) => {
   form.reset();
   loadMarkers(); // Optional: refresh map markers with the new case
 });
-
-async function getCaseCount() {
-  const { count, error } = await supabase
-    .from('missing_relatives')
-    .select('*', { count: 'exact', head: true });
-
-  if (error) {
-    console.error('Error fetching case stats:', error);
-    document.getElementById('case-count').textContent = 'Error loading stats';
-    return;
-  }
-
-  document.getElementById('case-count').textContent = count;
-}
-
-getCaseCount();
