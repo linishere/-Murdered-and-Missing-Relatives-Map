@@ -13,8 +13,8 @@ Our goal is to help make this crisis more visible and accessible, so communities
 
 ## Target Browsers & Clients
 
-Computer browsers: Chrome, Firefox, Edge, Safari
-Mobile browsers: Safari, Chrome, Firefox
+Computer browsers: Chrome, Firefox, Edge, Safari +
+Mobile browsers: Safari, Chrome, Firefox +
 Any HTTP client that can use restful APIs
 
 ## Developer Manual
