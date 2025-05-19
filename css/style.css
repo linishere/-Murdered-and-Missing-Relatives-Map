@@ -133,3 +133,14 @@ button:focus {
   color: #C73659;
   text-decoration: none; /* optional */
 }
+
+body.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+

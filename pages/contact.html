@@ -19,8 +19,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
 </head>
-<body>
-
+<body class = "fade-in">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">MMIP Map</a>
@@ -49,7 +48,10 @@
 <div class="container text-center mt-5">
     <h2 class="mb-4" style="font-family: 'New Amsterdam', serif;">Get in Touch</h2>
     <p style="font-family: 'Josefin Sans', sans-serif;">For more information or to report a case, please send an email to:</p>
-    <p><a href="mailto:miyamoto.3xp@gmail.com" class="btn btn-primary">miyamoto.3xp@gmail.com</a></p>
+    <p><a href="mailto:miyamoto.3xp@gmail.com?subject=MMIP%20Inquiry&body=Hello,%20I%20would%20like%20to%20report%20a%20case..." class="btn btn-primary btn-animate">
+        miyamoto.3xp@gmail.com
+    </a>
+    </p>
     <p style="font-family: 'Bungee Tint', cursive;">We value your input and support for this important cause.</p>
 </div>
 
@@ -61,6 +63,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+                setTimeout(() => window.location = link.href, 300);
+            });
+        });
+    </script>
 </body>
 </html>
