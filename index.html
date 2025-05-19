@@ -43,7 +43,7 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-4">
+    <div class="container mt-4 fade-in">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">Map of Missing and Murdered Indigenous People Cases</h1>
@@ -58,8 +58,8 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-    <h2>Submit a Missing Person Case</h2>
+    <div class="container mt-5 fade-in">
+        <h2>Submit a Missing Person Case</h2>
         <form id="caseForm">
         <div class="form-group">
             <label for="name">Name:</label>
@@ -77,7 +77,7 @@
             <label for="details">Details:</label>
             <textarea class="form-control" id="details" rows="3" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit Case</button>
+        <button type="submit" class="btn btn-primary btn-animate">Submit Case</button>
         </form>
     </div>
 
@@ -88,11 +88,21 @@
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- MapLibre GL JS -->
     <script src="https://unpkg.com/maplibre-gl@3.x/dist/maplibre-gl.js"></script>
     <!-- Custom JS -->
     <script type="module" src="/js/map.js"></script>
+    <!--Animation-->
+    <script>
+        document.querySelectorAll('.btn-animate').forEach(btn => {
+            btn.addEventListener('click', () => {
+            btn.classList.add('clicked');
+            setTimeout(() => btn.classList.remove('clicked'), 400);
+            });
+        });
+    </script>
+
 </body>
 </html>

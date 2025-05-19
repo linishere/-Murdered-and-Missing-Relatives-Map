@@ -115,17 +115,21 @@ p {
   100% { transform: scale(1); }
 }
 
-/* Drop animation for markers (if using custom marker elements) */
-@keyframes drop-in {
-  0% { transform: translateY(-20px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.marker {
-  animation: drop-in 0.5s ease forwards;
-}
-
 button:focus {
   outline: none;
 }
 
+.btn-animate.clicked {
+  animation: pulse 0.4s ease-in-out;
+}
+
+.card-header .btn-link {
+  font-size: 1.5rem; /* bigger font size */
+  font-weight: 600;  /* bolder */
+  color: #A91D3A;    /* optional: your theme color */
+}
+
+.card-header .btn-link:hover {
+  color: #C73659;
+  text-decoration: none; /* optional */
+}
