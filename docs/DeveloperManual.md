@@ -8,8 +8,8 @@ This server powers the Map of Missing and Murdered Indigenous People (MMIP) Case
 1. Prerequisites: Node.js (v18 or more) & npm (included in Node.js)
 
 2. Clone the repository:  
-git clone <your-repository-url>
-cd mmip-map-server
+git clone https://github.com/linishere-Murdered-and-Missing-Relatives-Map.git
+cd -Murdered-and-Missing-Relatives-Map
 
 3. Install dependencies: npm install
 
@@ -17,21 +17,17 @@ cd mmip-map-server
 
 Start the server with node index.js
 
-The API will be available at http://localhost:443/
+The API will be available at http://localhost:3000/
 
 ## Running Tests
 
 Currently, there are no automated tests implemented.
-To run the (placeholder) test script use npm test
 
 Feel free to add tests using a framework like Jest or Mocha.
 
 ## API Endpoints
 
 Here are the main API endpoints (you can update as you go):
-
-GET /
-Health check
 
 GET /api/cases
 List all MMIP cases
@@ -48,6 +44,9 @@ Update an MMIP case
 DELETE /api/cases/:id
 Delete an MMIP case
 
+GET /api/stats 
+Returns aggregated case statistics
+
 Note:  
 - For POST and PATCH, send JSON in the request body.
 - For DELETE and PATCH, provide the case `id` as a URL parameter.
@@ -56,6 +55,9 @@ Note:
 No critical bugs are currently documented, automated testing is not yet implemented, error handling and input validation may need improvement.
 
 ## Roadmap for Future Development:
-Add comprehensive automated tests, improve API documentation (consider Swagger/OpenAPI), enhance error handling and input validation, add authentication and authorization if required, improve logging and monitoring, optimize performance and scalability.
+- Add case search by name, age, or tribal affiliation 
+- Integrate user-generated case submissions with mdoeration 
+- Implement multilingual support (e.g. Cree, Ojibwe) 
+- Integrate heatmap and statistical overlays
 
 
